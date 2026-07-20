@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gun Market is a modern Bootstrap-based storefront for premium firearms and accessories.">
+    <title>Gun Market | Bootstrap App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      }
+      .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url("https://images.wallpapersden.com/image/download/skull-pistol_a2VlaWmUmZqaraWkpJRqaWVrrWhrZWk.jpg") center/cover;
+        color: white;
+      }
+      .card:hover {
+        transform: translateY(-4px);
+        transition: 0.3s ease;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#home">Gun Market</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#guns">Guns</a></li>
+            <li class="nav-item"><a class="nav-link" href="#info">Information</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero py-5" id="home">
+      <div class="container py-5 text-center">
+        <h1 class="display-4 fw-bold">Welcome to the Gun Market</h1>
+        <p class="lead mt-3">Your trusted destination for premium firearms, accessories, and expert guidance.</p>
+        <a href="#guns" class="btn btn-warning btn-lg mt-3">Explore Products</a>
+      </div>
+    </header>
+
+    <div id="checkoutStatus" class="container mt-4 d-none">
+      <div class="alert alert-success" role="alert"></div>
+    </div>
+
+    <section class="py-5" id="about">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <h2 class="fw-bold mb-3">About Us</h2>
+            <p class="text-muted">We are a leading online marketplace for firearms, offering a curated selection of quality guns and accessories. Our mission is to provide a secure and reliable platform for enthusiasts and collectors.</p>
+            <p class="text-muted">From precision rifles to trusted accessories, every listing is designed to make your shopping experience smooth and confident.</p>
+          </div>
+          <div class="col-lg-6">
+            <div class="border rounded p-4 bg-white shadow-sm">
+              <h5 class="fw-bold">Why Choose Gun Market?</h5>
+              <ul class="list-group list-group-flush mt-3">
+                <li class="list-group-item">Verified listings and secure checkout</li>
+                <li class="list-group-item">Wide variety of firearms and gear</li>
+                <li class="list-group-item">Fast support and expert recommendations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-white" id="guns">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2 class="fw-bold">Featured Guns</h2>
+          <p class="text-muted">A premium selection for every experience level.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/043/660/593/small/assault-rifle-on-isolated-background-png.png" alt="Classic Rifle" class="img-fluid mb-3">
+                <h5 class="card-title">Classic Rifle</h5>
+                <p class="card-text">Built for accuracy, reliability, and timeless performance.</p>
+                <span class="badge bg-dark">Popular</span>
+                <button type="button" class="btn btn-outline-dark buy-btn mt-3 w-100" data-name="Classic Rifle" data-price="1299">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/035/930/026/small/ai-generated-pistol-gun-isolated-on-transparent-background-ai-png.png" alt="Compact Pistol" class="img-fluid mb-3">
+                <h5 class="card-title">Compact Pistol</h5>
+                <p class="card-text">A lightweight option with excellent handling and modern design.</p>
+                <span class="badge bg-warning text-dark">New</span>
+                <button type="button" class="btn btn-outline-dark buy-btn mt-3 w-100" data-name="Compact Pistol" data-price="899">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <img src="https://shootersworld.com/wp-content/uploads/4_3-guns-shotgun-Mossberg-940-Pro-Tactical-12-Gauge-Shotgun.jpg" alt="Tactical Shotgun" class="img-fluid mb-3">
+                <h5 class="card-title">Tactical Shotgun</h5>
+                <p class="card-text">Engineered for power, durability, and confidence in the field.</p>
+                <span class="badge bg-success">Limited</span>
+                <button type="button" class="btn btn-outline-dark buy-btn mt-3 w-100" data-name="Tactical Shotgun" data-price="1499">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5" id="info">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="p-4 rounded bg-dark text-white h-100">
+              <h5 class="fw-bold">Safe Buying</h5>
+              <p class="mb-0">Our platform is designed to keep each transaction secure and transparent.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 rounded bg-light h-100 border">
+              <h5 class="fw-bold">Expert Support</h5>
+              <p class="mb-0">Get helpful guidance from our dedicated support team whenever you need it.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 rounded bg-warning h-100">
+              <h5 class="fw-bold">Fast Delivery</h5>
+              <p class="mb-0">Reliable shipping options make it easier to receive your order quickly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <p class="mb-0">© 2026 Gun Market. All rights reserved.</p>
+        <div>
+          <a href="#home" class="text-white text-decoration-none me-3">Home</a>
+          <a href="#about" class="text-white text-decoration-none me-3">About</a>
+          <a href="#guns" class="text-white text-decoration-none">Products</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="checkoutModalLabel">Complete Your Checkout</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form id="checkoutForm">
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="productName" class="form-label">Selected Gun</label>
+                <input type="text" class="form-control" id="productName" readonly>
+              </div>
+              <div class="mb-3">
+                <label for="productPrice" class="form-label">Price</label>
+                <input type="text" class="form-control" id="productPrice" readonly>
+              </div>
+              <input type="hidden" id="selectedProduct">
+              <div class="mb-3">
+                <label for="customerName" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="customerName" required>
+              </div>
+              <div class="mb-3">
+                <label for="customerEmail" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="customerEmail" required>
+              </div>
+              <div class="mb-3">
+                <label for="quantity" class="form-label">Quantity</label>
+                <input type="number" class="form-control" id="quantity" min="1" max="5" value="1" required>
+              </div>
+              <div id="checkoutMessage" class="alert d-none" role="alert"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-dark">Confirm Order</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="gun-checkout.js"></script>
+  </body>
+</html>
